@@ -1,0 +1,11 @@
+landingpage:
+  image: bitnami/nginx:latest
+  ports:
+    - 8002:80
+  volumes:
+    - ./www:/app
+    - ./nginx:/bitnami/nginx/
+  environment:
+    VIRTUAL_HOST: luuun.com,www.luuun.com
+    LETSENCRYPT_HOST: luuun.com,www.luuun.com
+    LETSENCRYPT_EMAIL: michail@zapgo.co

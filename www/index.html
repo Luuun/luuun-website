@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+          content="Stellar Web Wallet for Lumens.">
+    <meta name="author" content="Rehive">
+
+    <title>Luuun</title>
+
+    <!-- Bootstrap Core CSS -->
+    <script src="js/accounting.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="css/icons.css"/>
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Shortcut Icon-->
+    <link rel="shortcut icon" href="img/ico/32.png" sizes="32x32" type="image/png"/>
+    <link rel="apple-touch-icon-precomposed" href="img/ico/60.png" type="image/png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icon/72.png"
+          type="image/png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/ico/120.png"
+          type="image/png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/ico/152.png"
+          type="image/png"/>
+</head>
+
+<script type="text/javascript">
+    WebFontConfig = {
+        google: {families: ['Lato:400,300,700:latin']}
+    };
+    (function () {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+</script>
+
+<body id="home">
+
+    <div class="navbar navbar-inverse navbar-fixed-top mymenu" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img style="width: 120px;" src="img/rehive-logo2.svg"/></a>
+            </div>
+        </div>
+    </div>
+
+    <section id="wallet-desktop" class="grey-bg banner-section">
+        <div id="contents" class='desktop'>
+            <iframe src="https://rehive.github.io/stellar-wallet/"></iframe>
+        </div>
+    </section>
+
+    <footer id="main-footer" class="dark-type">
+        <div class="container">
+            <p class="footertext hidden-xs">&copy; plusGo Co. All rights reserved.</p>
+
+            <p class="footertext visible-xs text-center">&copy; plusGo Co. All rights reserved.</p>
+        </div>
+</footer>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.singlePageNav.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easypiechart.min.js"></script>
+    <script type="text/javascript" src="js/contact.min.js"></script>
+    <script type="text/javascript" src="js/flatking.blue.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#animation").addClass("start_animation");
+        });
+    </script>
+
+    <script>
+        var setFrame = function (redirect=false) {
+            width = window.screen.width < window.outerWidth ? window.screen.width : window.outerWidth;
+            if (width < 600) {
+                $("#contents").attr("class","mobile");
+            }
+            else {
+                $("#contents").attr("class","desktop");
+            }
+        }
+
+        setFrame()
+
+        $(window).resize(function() {
+            setFrame();
+        });
+    </script>
+
+</body>
+
+</html>
