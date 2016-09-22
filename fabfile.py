@@ -115,6 +115,15 @@ def upload_app():
     rsync_project(
         env.project_dir, './', delete=True)
 
+def upload_www():
+    rsync_project('/srv/htdocs/%s/' % env.project_name, './www/', exclude=('node_modules',))
+
+def upload_config():
+    virtual_hosts = env.virtual_host.split(',')
+    for virtual_host in virtual_hosts:
+        put('./etc/nginx-vhost.conf', '/srv/config/%s' % virtual_host)
+        run("sed -i 's/{{project_name}}/%s/g' '/srv/config/%s'" % (env.project_name, virtual_host))
+
 def deploy():
     upload_app()
 
@@ -302,3 +311,6 @@ def push_ssh(keyfile):
     for key in keys:
         key = key.replace('\n', '')
         run('echo {key} >> ~/.ssh/authorized_keys'.format(key=key))
+
+def chown_everything():
+    sudo("chown -R %s:%s /srv/" % ('ubuntu', 'ubuntu'))
