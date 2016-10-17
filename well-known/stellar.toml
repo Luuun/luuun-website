@@ -1,1 +1,5 @@
-FEDERATION_SERVER="https://staging.rehive.com/adapters/stellar/federation/"
+FEDERATION_SERVER="https://api.luuun.com/adapters/stellar/federation/"
+
+[[CURRENCIES]]
+code="USD"
+issuer="GCBRQFO4JLA5ZCPHYHLB5M4VMXXO6IJX7UDBXVSRYX3UC45ZKIBUC3DE"
