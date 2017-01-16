@@ -1,4 +1,4 @@
-FEDERATION_SERVER="https://api.luuun.com/adapters/stellar/federation/"
+FEDERATION_SERVER="https://rehive.com/services/crypto/stellar_federation/"
 
 [[CURRENCIES]]
 code="USD"
