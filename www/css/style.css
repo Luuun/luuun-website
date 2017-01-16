@@ -185,6 +185,11 @@ ul .products {
     color: #FFF;
 }
 
+.med-type {
+    background-color: #e0e0e0;
+    color: #4A4A4A;
+}
+
 .dark-type {
     color: #4A4A4A;
 }
