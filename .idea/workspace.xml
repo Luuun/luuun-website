@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f384f16c-45cb-4eef-b4a4-eb4d9c741e8c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/well-known/stellar.toml" afterPath="$PROJECT_DIR$/www/well-known/stellar.toml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/style.css" afterPath="$PROJECT_DIR$/www/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/wallet.html" afterPath="$PROJECT_DIR$/www/app/wallet.html" />
     </list>
     <ignored path="luuun-website.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,21 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="wallet.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="wallet.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/app/wallet.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.375">
-              <caret line="78" column="64" selection-start-line="78" selection-start-column="58" selection-end-line="78" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.58290154">
+              <caret line="80" column="89" selection-start-line="80" selection-start-column="89" selection-end-line="80" selection-end-column="89" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23913044">
-              <caret line="132" column="34" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
+            <state vertical-scroll-proportion="-43.192307">
+              <caret line="150" column="54" selection-start-line="150" selection-start-column="54" selection-end-line="150" selection-end-column="54" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#1;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -89,11 +87,11 @@
         <option value="$PROJECT_DIR$/nginx/conf/nginx.conf" />
         <option value="$PROJECT_DIR$/www/content/app.html" />
         <option value="$PROJECT_DIR$/fabfile.py" />
-        <option value="$PROJECT_DIR$/www/app/wallet.html" />
         <option value="$PROJECT_DIR$/www/content/wallet.html" />
         <option value="$PROJECT_DIR$/www/well-known/stellar.toml" />
         <option value="$PROJECT_DIR$/www/css/style.css" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/app/wallet.html" />
       </list>
     </option>
   </component>
@@ -162,6 +160,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="luuun-website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="luuun-website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -880,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/wallet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.375">
-          <caret line="78" column="64" selection-start-line="78" selection-start-column="58" selection-end-line="78" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.75">
@@ -898,8 +906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23913044">
-          <caret line="132" column="34" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
+        <state vertical-scroll-proportion="-43.192307">
+          <caret line="150" column="54" selection-start-line="150" selection-start-column="54" selection-end-line="150" selection-end-column="54" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#1;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -907,6 +915,14 @@
             <element signature="n#style#0;n#img#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/wallet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58290154">
+          <caret line="80" column="89" selection-start-line="80" selection-start-column="89" selection-end-line="80" selection-end-column="89" />
+          <folding />
         </state>
       </provider>
     </entry>
