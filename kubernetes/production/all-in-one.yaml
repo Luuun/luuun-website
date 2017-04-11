@@ -47,13 +47,13 @@ metadata:
 spec:
   tls:
   - hosts:
-    - new.luuun.com
+    - luuun.com
     secretName: luuun-website-tls
   rules:
-  - host: new.luuun.com
+  - host: luuun.com
     http:
       paths:
       - path: /*
         backend:
           serviceName: luuun-website
-          servicePort: 80
+          servicePort: 80  

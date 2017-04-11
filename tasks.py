@@ -19,7 +19,10 @@ def templater(ctx, config, template='kubernetes/templates/all-in-one.yaml'):
     """ Creates deployment setup for given config file"""
 
     if config[-5:] != '.yaml':
+        config_name = config
         config += '.yaml'
+    else:
+        config_name = config[:-5]
 
     # Get path of tasks.py file to allow independence from CWD
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -36,8 +39,9 @@ def templater(ctx, config, template='kubernetes/templates/all-in-one.yaml'):
         template_str = myfile.read()
 
     formatted = format_yaml(template_str, config_dict)
-    output_dir = os.path.join(dir_path, 'kubernetes', config_dict['NAMESPACE'])
+    output_dir = os.path.join(dir_path, 'kubernetes', config_name)
     output_path = os.path.join(output_dir, 'all-in-one.yaml')
+    print(output_path)
     if os.path.isfile(output_path):
         print('Deployment config already exists. Aborting.')
     else:
@@ -143,6 +147,17 @@ def release(ctx, config, version_bump='prerelease'):
           'Tag: {}\n'
           'Image: {}\n'.format(tag, image_name))
 
+@task
+def setup(ctx, config):
+    """
+    Updates kubernetes deployment to use specified version
+    """
+    if config[-5:] != '.yaml':
+        config_name = config
+    else:
+        config_name = config[:-5]
+
+    ctx.run('kubectl apply -f kubernetes/{}/all-in-one.yaml'.format(config_name))
 
 @task
 def deploy(ctx, config, version_tag):
@@ -160,6 +175,16 @@ def deploy(ctx, config, version_tag):
                                           config_dict['PROJECT_NAME'],
                                           image,
                                           config_dict['NAMESPACE']), echo=True)
+
+@task
+def ip(ctx, config):
+    """
+    Updates kubernetes deployment to use specified version
+    """
+
+    config_dict = get_config(config)
+    ctx.run('kubectl get ingress --namespace {} {}'.format(config_dict['NAMESPACE'],
+                                                           config_dict['PROJECT_NAME']), echo=True)
 
 
 @task

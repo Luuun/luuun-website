@@ -11,10 +11,10 @@ Manual Deployment:
    `inv build -c production -v v0.001`
 2. Push to Container Registry:  
    `inv build -c production -v v0.001`
-3. Run locally:
-    `inv run -c production -v v0.001`
-4. Deploy to Kubernetes Cluster:
-    `inv deploy -c production.yaml -v v0.001`
+3. Run locally:  
+    `inv run -c production -v v0.001`  
+4. Deploy to Kubernetes Cluster:  
+    `inv deploy -c production.yaml -v v0.001`  
 
 ### Once-off Kubernetes Cluster Setup:
 1. Create a Kubernetes Cluster
@@ -26,7 +26,7 @@ Manual Deployment:
 4. Letsencrypt SSL setup:  
     `kubectl apply -f lego/00-namespace.yaml && kubectl apply -f lego/configmap.yaml && kubectl apply -f lego/deployment.yaml`  
 5. Webserver setup:  
-    `inv templater production.yaml`  
-	`kubectl apply -f server/kubernetes/production/all-in-one.yaml`  
+    `inv templater production`  
+	`inv setup production`  
 6. Check the external IP address and setup DNS:  
-   `kubectl get ingress --namespace luuun-website luuun-website`  
+    `inv ip production`  
