@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: luuun-website
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: luuun-website
+  namespace: luuun-website
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+  type: NodePort
+  selector:
+    app: luuun-website
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: luuun-website
+  namespace: luuun-website
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: luuun-website
+    spec:
+      containers:
+      - image: zapgo/luuun-website
+        imagePullPolicy: Always
+        name: luuun-website
+        ports:
+        - containerPort: 80
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: luuun-website
+  namespace: luuun-website
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "gce"
+spec:
+  tls:
+  - hosts:
+    - new.luuun.com
+    secretName: luuun-website-tls
+  rules:
+  - host: new.luuun.com
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: luuun-website
+          servicePort: 80
