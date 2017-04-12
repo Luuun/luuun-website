@@ -1,4 +1,4 @@
 PROJECT_NAME: luuun-website
-NAMESPACE: luuun-website
+NAMESPACE: luuun-website2
 IMAGE: zapgo/luuun-website
 VIRTUAL_HOST: luuun.com
