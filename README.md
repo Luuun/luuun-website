@@ -10,7 +10,7 @@ Manual Deployment:
 1. Build the static webserver:  
    `inv build -c production -v v0.001`
 2. Push to Container Registry:  
-   `inv build -c production -v v0.001`
+   `inv push -c production -v v0.001`
 3. Run locally:  
     `inv run -c production -v v0.001`  
 4. Deploy to Kubernetes Cluster:  
