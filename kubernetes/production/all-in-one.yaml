@@ -30,7 +30,7 @@ spec:
         app: luuun-website
     spec:
       containers:
-      - image: zapgo/luuun-website:v0.015
+      - image: gcr.io/rehive-services/luuun-website:v0.015
         imagePullPolicy: Always
         name: luuun-website
         ports:
