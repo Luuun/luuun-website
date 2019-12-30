@@ -1,0 +1,20 @@
+version: '1'
+configs:
+    staging:
+      project_name: luuun-website
+      docker_image: rehiveservices.azurecr.io/luuun-website
+      cloud_project: rehive-services
+      cluster: staging
+      namespace: luuun-website-staging
+      helm_chart: rehive/rehive-service
+      helm_chart_version: 0.1.32
+      helm_values_path: ./etc/helm/staging/values.yaml
+    production:
+      project_name: luuun-website
+      docker_image: rehiveservices.azurecr.io/luuun-website
+      cloud_project: rehive-services
+      cluster: production
+      namespace: luuun-website
+      helm_chart: rehive/rehive-service
+      helm_chart_version: 0.1.32
+      helm_values_path: ./etc/helm/production/values.yaml
